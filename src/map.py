@@ -58,6 +58,14 @@ with zipfile.ZipFile(args.input_path) as archive:
                 # convert text to lower case
                 text = tweet['text'].lower()
 
+                #try:
+                #    print('tweet["place"]["country_code"]=', tweet["place"]["country_code"])
+                #except TypeError:
+                #   country_code = 'unknown'
+                #   pass
+
+                import pprint
+
                 # search hashtags
                 for hashtag in hashtags:
                     lang = tweet['lang']
